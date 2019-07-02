@@ -3,147 +3,21 @@
   
   <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>Reports</title>
     <link href="../static/styles/home-style.css" rel="stylesheet">
     <link href="../static/styles/tab.css" rel="stylesheet">
-<<<<<<< HEAD
-=======
     <link href="../static/styles/submission.css" rel="stylesheet">
->>>>>>> 62f8a435b7cefe3a15277dea784a9323c28c2531
     <script src="../static/scripts/main.js" async></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
     <script src="../static/scripts/autocomplete.js" async></script>
+
   </head>
 
   <body>
-
-    <div id="no-footer">
-<<<<<<< HEAD
-
-      <!--navigation bar-->
-      <div class="navbar">
-        <img src="../static/images/google2.jpg" alt="logo">
-        <a href="/home">Home</a> 
-        <a href="/about">About</a>
-        <a href="/publications">Publications</a>
-        <a href="/statistics">Statistics</a>
-        <a href="/contact-us">Contact Us</a>
-        <div class="dropdown">
-          <button class="dropbtn">Help
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="/help/eula">EULA</a>
-            <a href="/help/faq">FAQ</a>
-            <a href="/help/submission-help">Submission Help</a>
-            <a href="/help/features-table">Features Table</a>
-            <a href="/help/matchy-api">MatchY API</a>
-            <a href="/help/mme-api">MatchMaker Exchange API</a>
-            <a href="/help/external-data">External Data Sources</a>
-          </div>
-        </div> 
-        <div class="nav-right">
-          <a href="/my_submissions">My Submissions</a>
-          <a href="/account">My Account</a>
-          <a href="#">Log Out</a>
-        </div>
-      </div>
-      
-      <!-- Tabs -->
-      <div class="tab">
-        <input type="checkbox" checked disabled class="tablinks active"><label>Gene</label><br>
-        <input type="checkbox" id="inheritance-pattern-link" onclick="openTab('inheritance-pattern-tab')"><label>Inheritance Pattern</label><br>
-        <input type="checkbox" id="variant-type-link" onclick="openTab('variant-type-tab')"><label>Variant Type</label><br>
-        <input type="checkbox" id="variant-link" onclick="openTab('variant-tab')"><label>Variant</label><br>
-        <input type="checkbox" id="phenotype-link" onclick="openTab('phenotype-tab')"><label>Phenotype</label><br>
-      </div>
-
-      <!-- Tab content -->
-      <div id="tabcontents-box">
-        <form action="/search-result" method="POST">        
-          <div id="gene-tab" class="tabcontent active">
-            <label for="gene">Gene:</label>
-            <input type="text" id="gene" name="gene">
-          </div>
-
-          <div id="inheritance-pattern-tab" class="tabcontent">
-            <label for="inheritance-pattern">Inheritance pattern:</label>
-            <select id="inheritance-pattern" name="inheritance-pattern">
-              <option>Select inheritance pattern</option>
-              <option>Dominant</option>
-              <option>Recessive</option>
-              <option>De Novo</option>
-              <option>Unknown</option>
-            </select>
-          </div>
-
-          <div id="variant-type-tab" class="tabcontent">
-              <label for="variant-type">Variant type:</label>
-              <select id="variant-type" name="variant-type">
-                <option>Select optional variant type</option>
-                <optgroup label="Loss of function:">
-                  <option>Stop gain</option>
-                  <option>Frameshift</option>
-                  <option>Splicing</option>
-                </optgroup>
-                <option>Missense</option>
-                <option>Other</option>
-                <option>All</option>
-              </select>
-          </div>
-
-          <div id="variant-tab" class="tabcontent">
-              <h1>Variant</h1>
-              <label for="chr">Chromosome:</label>
-              <select id="chr" name="chr">
-                <option>Select chromosome</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-                <option>13</option>
-                <option>14</option>
-                <option>15</option>
-                <option>16</option>
-                <option>17</option>
-                <option>18</option>
-                <option>19</option>
-                <option>20</option>
-                <option>21</option>
-                <option>22</option>
-                <option>X</option>
-                <option>Y</option>
-              </select>
-              <label for="position">Position:</label>
-              <input type="text" id="position" name="position">
-              <label for="ref">Reference Bases:</label>
-              <input type="text" id="ref" name="ref">
-              <label for="alt">Alternate Bases:</label>
-              <input type="text" id="alt" name="alt">
-          </div>
-                  
-          <div id="phenotype-tab" class="tabcontent">
-            <label for="phenotype">Phenotype:</label>
-            <input type="text" id="phenotype" name="phenotype">
-          </div>
-                
-          <input type="submit" value="Search">
-        </form>
-
-      </div>
-
-    <div id="clear"></div>
-=======
     
+    <div id="no-footer">
+
     <!--navigation bar-->
     <div class="navbar">
       <img src="../static/images/google2.jpg" alt="logo">
@@ -172,7 +46,7 @@
               <a href="/help/faq">FAQ</a>
               <a href="/help/submission-help">Submission Help</a>
               <a href="/help/features-table">Features Table</a>
-              <a href="/help/matchy-api">Matchy API</a>
+              <a href="/help/genematcher-api">GeneMatcher API</a>
               <a href="/help/mme-api">MatchMaker Exchange API</a>
               <a href="/help/external-data-sources">External Data Sources</a>
           </div>
@@ -185,15 +59,15 @@
 
       <!-- Tabs -->
       <div class="tab">
-        <button class="tablinks active" onclick="openTab(event, 'Submissions')">Submissions</button>
+        <button class="tablinks" onclick="openTab(event, 'Submissions')">Submissions</button>
         <button class="tablinks" onclick="openTab(event, 'Gene-Search')">Gene Search</button>
         <button class="tablinks" onclick="openTab(event, 'Diagnosis-Search')">Diagnosis Search</button>
-        <button class="tablinks" onclick="openTab(event, 'Reports')">Reports</button>
+        <button class="tablinks active" onclick="openTab(event, 'Reports')">Reports</button>
         <button class="tablinks" onclick="openTab(event, 'Match-Outcomes')">Match Outcomes</button>
       </div>
-        
+                
       <!-- Tab content -->
-      <div id="Submissions" class="tabcontent active">
+      <div id="Submissions" class="tabcontent">
           <h1>Quick Search</h1>
           <form action="/submission/result" method="POST"> 
             <input type="text" id="identifier" name="identifier" placeholder="Identifier...">
@@ -264,7 +138,7 @@
             </form>
       </div>
 
-      <div id="Reports" class="tabcontent">
+      <div id="Reports" class="tabcontent active">
         <h1>Reports</h1>
         <ul>
           <li><a href="/reports/events">All events report</a></li>
@@ -389,11 +263,12 @@
       </div>
 
     </div>
->>>>>>> 62f8a435b7cefe3a15277dea784a9323c28c2531
 
     <footer>
       <p>MatchY insert footer</p>
     </footer>
+
+
     
   </body>
 </html>

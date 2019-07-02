@@ -1,12 +1,11 @@
-var states;
+var states2;
 
 jQuery.ajax({
         url:'http://10.5.33.255:5000/static/hgnc_gene_names_sorted.txt', 
         success: function(data) {
-            states = data.split("\n");
+            states2 = data.split("\n");
         }, 
         async:false});
-
 
 var substringMatcher = function(strs) {
     return function findMatches(q, cb) {
@@ -17,7 +16,7 @@ var substringMatcher = function(strs) {
   
       // regex used to determine if a string contains the substring `q`
       substrRegex = new RegExp(q, 'i');
-  
+
       // iterate through the pool of strings and for any string that
       // contains the substring `q`, add it to the `matches` array
       $.each(strs, function(i, str) {
@@ -29,47 +28,15 @@ var substringMatcher = function(strs) {
       cb(matches);
     };
 };
-<<<<<<< HEAD
-  
-  $('#gene').typeahead({
-=======
 
-  
-  $('#gene-symbol').typeahead({
->>>>>>> 62f8a435b7cefe3a15277dea784a9323c28c2531
+ 
+  $('#my_search').typeahead({
     hint: true,
     highlight: true,
     minLength: 1
   },
   {
-    name: 'states',
-    source: substringMatcher(states)
-<<<<<<< HEAD
+    name: 'states2',
+    source: substringMatcher(states2)
   });
 
-
-
-//phenotype
-
-var phenotypeSuggest = new Bloodhound({
-  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
-  queryTokenizer: Bloodhound.tokenizers.whitespace,
-  remote: {
-    url: '/?query=%QUERY',
-    wildcard: '%QUERY'
-  }
-});
-
-$('#phenotype').typeahead({
-  hint: true,
-  highlight: true,
-  minLength: 3
-},
-{
-  name: 'phenotypes',
-  display: 'value',
-  source: phenotypeSuggest
-});
-=======
-  });
->>>>>>> 62f8a435b7cefe3a15277dea784a9323c28c2531

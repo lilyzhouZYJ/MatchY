@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 
@@ -16,22 +15,12 @@ def login():
 		else:
 			return redirect('/home')
 	return render_template('login.html', error=error)
-=======
-from flask import Flask, render_template, request
-app = Flask(__name__)
-
-@app.route("/")
-def index():
-   return render_template("index.html")
->>>>>>> 62f8a435b7cefe3a15277dea784a9323c28c2531
 
 @app.route("/home")
 def home():
    return render_template("home.html")
 
-<<<<<<< HEAD
-
-@app.route("/home")
+@app.route("/test")
 def test():
    query = request.GET.get('query') or ""
    res = es.search(index="patients", body={
@@ -48,8 +37,6 @@ def test():
    phenotypes = json.dumps(phnDic)
    return phenotypes
 
-
-=======
 @app.route("/gene-search")
 def geneSearch():
    return render_template("gene-search.html")
@@ -69,7 +56,6 @@ def matchOutcome():
 @app.route("/reports/events")
 def reportsEvents():
    return render_template("events.html")
->>>>>>> 62f8a435b7cefe3a15277dea784a9323c28c2531
 
 @app.route("/about")
 def about():
@@ -119,7 +105,6 @@ def mmeApi():
 def externalData():
    return render_template("external-data.html")
 
-<<<<<<< HEAD
 @app.route("/my_submissions")
 def mySubmissions():
    return render_template("my-submissions.html")
@@ -156,7 +141,7 @@ def searchResult():
 	}, size=100)
 	
 	return render_template('search-result.html', gene=geneHGNC, inheritancePattern=inheritancePattern, variantType=variantType, chr=chr, position=position, alt=alt, ref=ref, phenotype=phenotype,res=res)
-=======
+
 
 
 
@@ -173,8 +158,6 @@ def geneSearchResult():
 def diagnosisSearchResult():
 	return render_template('diagnosis-search-result.html', mimNumber=request.form['mim-number'], disorderType=request.form['disorder-type'], inheritancePattern=request.form['inheritance-pattern'])
 
-
->>>>>>> 62f8a435b7cefe3a15277dea784a9323c28c2531
 
 if __name__ == '__main__':
    app.run(debug = True, host='0.0.0.0')

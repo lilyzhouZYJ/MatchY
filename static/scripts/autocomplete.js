@@ -29,14 +29,8 @@ var substringMatcher = function(strs) {
       cb(matches);
     };
 };
-<<<<<<< HEAD
   
   $('#gene').typeahead({
-=======
-
-  
-  $('#gene-symbol').typeahead({
->>>>>>> 62f8a435b7cefe3a15277dea784a9323c28c2531
     hint: true,
     highlight: true,
     minLength: 1
@@ -44,7 +38,6 @@ var substringMatcher = function(strs) {
   {
     name: 'states',
     source: substringMatcher(states)
-<<<<<<< HEAD
   });
 
 
@@ -55,7 +48,7 @@ var phenotypeSuggest = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
   queryTokenizer: Bloodhound.tokenizers.whitespace,
   remote: {
-    url: '/?query=%QUERY',
+    url: '/test?query=%QUERY',
     wildcard: '%QUERY'
   }
 });
@@ -70,6 +63,3 @@ $('#phenotype').typeahead({
   display: 'value',
   source: phenotypeSuggest
 });
-=======
-  });
->>>>>>> 62f8a435b7cefe3a15277dea784a9323c28c2531

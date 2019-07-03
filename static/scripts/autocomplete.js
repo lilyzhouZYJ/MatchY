@@ -37,29 +37,7 @@ var substringMatcher = function(strs) {
   },
   {
     name: 'states',
-    source: substringMatcher(states)
+    source: substringMatcher(states),
+    limit: 8
   });
 
-
-
-//phenotype
-
-var phenotypeSuggest = new Bloodhound({
-  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
-  queryTokenizer: Bloodhound.tokenizers.whitespace,
-  remote: {
-    url: '/test?query=%QUERY',
-    wildcard: '%QUERY'
-  }
-});
-
-$('#phenotype').typeahead({
-  hint: true,
-  highlight: true,
-  minLength: 3
-},
-{
-  name: 'phenotypes',
-  display: 'value',
-  source: phenotypeSuggest
-});

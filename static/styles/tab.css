@@ -145,8 +145,8 @@ input[type=submit]:hover {
 }
 
 .tt-suggestion{
-  display: block:
-  padding-left: 30px;
+  display: block;
+  padding-left: 5px;
 }
 
 .tt-suggestion:hover,
@@ -154,3 +154,37 @@ input[type=submit]:hover {
 .tt-suggestion.tt-cursor {
   background-color: gainsboro;
 } 
+
+.selected-phenotype {
+  display: inline-block;
+  background-color: lightblue;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  width: 400px;
+}
+
+.delete-button {
+  width: 80px;
+  padding: 10px 20px;
+  margin-left: 1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #00356B90;
+  border: none;
+  color: white;
+  font: inherit;
+}
+
+.delete-button:hover{
+  background-color: lightblue;
+  color: #00356B;
+}
+
+#duplication-error {
+  margin: 10px 0;
+  color: red;
+}

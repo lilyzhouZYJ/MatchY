@@ -12,27 +12,19 @@
 
 input[type=text], select{
     width: 360px;
-<<<<<<< HEAD
     padding: 10px 20px;
-=======
-    padding: 10px 18px;
->>>>>>> 62f8a435b7cefe3a15277dea784a9323c28c2531
     margin: 8px 0;
     display: block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
-<<<<<<< HEAD
     font-family: inherit;
 }
 
 select {
   cursor: pointer;
 }
-=======
-  }
->>>>>>> 62f8a435b7cefe3a15277dea784a9323c28c2531
 
 .api {
     border: 1px solid #ccc;
@@ -88,11 +80,7 @@ textarea {
     width: 360px;
     padding: 12px 20px;
     margin: 1rem 0 1rem 20rem;
-<<<<<<< HEAD
     background-color:#00356B;
-=======
-    background-color:darkblue;
->>>>>>> 62f8a435b7cefe3a15277dea784a9323c28c2531
     color: white;
     font-size: 16px;
     border: none;

@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
     <script src="../static/scripts/autocomplete.js" async></script>
+    <script src="../static/scripts/autocomplete_phenotype.js" async></script>
   </head>
 
   <body>
@@ -56,7 +57,7 @@
 
       <!-- Tab content -->
       <div id="tabcontents-box">
-        <form action="/search-result" method="POST">        
+        <form id="search-form" action="/search-result" method="POST">        
           <div id="gene-tab" class="tabcontent active">
             <label for="gene">Gene:</label>
             <input type="text" id="gene" name="gene">
@@ -65,11 +66,18 @@
           <div id="inheritance-pattern-tab" class="tabcontent">
             <label for="inheritance-pattern">Inheritance pattern:</label>
             <select id="inheritance-pattern" name="inheritance-pattern">
-              <option>Select inheritance pattern</option>
-              <option>Dominant</option>
-              <option>Recessive</option>
-              <option>De Novo</option>
-              <option>Unknown</option>
+              <option>Select optional inheritance pattern</option>
+              <option>HP:0000006 - Autosomal dominant inheritance</option>
+              <option>HP:0000007 - Autosomal recessive inheritance</option>
+              <option>HP:0001472 - Familial predisposition</option>
+              <option>HP:0001426 - Multifactorial inheritance</option>
+              <option>HP:0001427 - Mitochondrial inheritance</option>
+              <option>HP:0001425 - Heterogeneous</option>
+              <option>HP:0001428 - Somatic mutation</option>
+              <option>HP:0001466 - Contiguous gene syndrome</option>
+              <option>HP:0003745 - Sporadic</option>
+              <option>HP:0003743 - Genetic anticipation</option>
+              <option>HP:0010985 - Gonosomal inheritance</option>
             </select>
           </div>
 
@@ -128,10 +136,10 @@
                   
           <div id="phenotype-tab" class="tabcontent">
             <label for="phenotype">Phenotype:</label>
-            <input type="text" id="phenotype" name="phenotype">
+            <input type="text" id="phenotype" onkeypress="addPhenotype(event)">
           </div>
                 
-          <input type="submit" value="Search">
+          <input type="submit" value="Search" onclick="appendPhenotype()">
         </form>
 
       </div>
